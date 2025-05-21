@@ -1,0 +1,75 @@
+Day 01
+
+✅   2206. Divide Array Into Equal Pairs
+✅   2341. Maximum Number of Pairs in Array
+✅   2357. Make Array Zero by Subtracting Equal Amounts
+✅   2293. Min Max Game - Array
+
+Day 02
+
+✅   2210. Count Hills and Valleys in an Array
+✅   2154. Keep Multiplying Found Values by Two
+✅   2176. Count Equal and Divisible Pairs in an Array  
+✅   2169. Count Operations to Obtain Zero
+
+Day 03
+
+✅   2164. Sort Even and Odd Indices Independently
+✅   2160. Minimum Sum of Four Digit Number After Splitting Digits
+✅   2078. Two Furthest Houses With Different Colors
+✅   2057. Smallest Index With Equal Value
+   
+Day 04
+
+✅   1732. Find the Highest Altitude
+✅   2037. Minimum Number of Seat Everyone
+✅   1979. Find Greatest Common Divisor of Array
+✅   2315. Count Asterisks
+
+Day 05
+
+✅   2399. Check distances Between same letters
+✅   2309. Greatest English Letter in Upper and Lower Case
+✅   2299. Strong Password Checker II
+✅   2287. Rearrange Characters to Make Target String
+   
+Day 06
+   
+✅   2283. Check if Number Has Equal Digit Count and Digit Value
+✅   2278. Percentage of Letter in String
+✅   2273. Find Resultant Array After Removing Anagrams
+✅   2264. Largest 3-Same-Digit Number in String+
+
+Day 07
+   
+✅   2259. Remove Digit From Number to Maximize Result
+✅   2243. Calculate Digit Sum of a String
+✅Seriously ?   2124. Check if All A's Appears Before All B's
+✅   2068. Check Whether Two Strings are Almost Equivalent
+
+Day 08
+    
+✅   2042. Check if Numbers Are Ascending in a Sentence
+✅   2000. Reverse Prefix of Word
+✅   2404. Most Frequent Even Element
+✅   2325. Decode the Message 
+
+Day 09
+
+✅   2062.Count Vowel Substrings of a String
+✅   2053.Kth Distinct String in an Array
+✅   290. Word Pattern
+✅   389. Find the Difference
+
+Day 10
+   
+✅   575. Distribute Candies
+✅   645. Set Mismatch
+✅   804. Unique Morse Code Words
+✅   819. Most Common Word
+   
+
+   
+   
+   
+   
