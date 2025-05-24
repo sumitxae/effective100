@@ -1,4 +1,7 @@
 import java.lang.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
     public static void qu1 (int a, int b) {
@@ -32,6 +35,7 @@ public class Main {
             return true;
         } else {
             System.out.println("Sorry "+name+" you can't cast the vote.");
+            System.out.println("You'll be eligble to vote in "+(18-age)+" year(s)");
             return false;
         }
     }
@@ -57,7 +61,32 @@ public class Main {
         }
     }
 
+    public static int greatestOfThree(int a, int b, int c) {
+        if (a >= b && a >= c) return  a;
+        else if (b >= a && b >= c) return b;
+        else return c;
+    }
+
+    public static boolean isLeapYear (int year) {
+     if (year % 100 == 0) {
+         return year % 400 == 0 && year % 4 == 0;
+     } else return year % 4 == 0;
+    }
+
+    public static String alphType(char alphabet) {
+        Set<Character> vowels = new HashSet<>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
+        if (vowels.contains(alphabet)) return "The given alphabet is a Vowel";
+        else return "The given alphabet is a Consonant";
+    }
+
+    public static void printHelloNTimes(int n) {
+        while (n > 0) {
+            System.out.println("Hello");
+            n--;
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(dayName(45));
+        printHelloNTimes(4);
     }
 }
