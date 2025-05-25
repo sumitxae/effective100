@@ -86,7 +86,22 @@ public class Main {
         }
     }
 
+    public static void naturalN(int n, boolean asc) {
+        if (asc) {
+            int i = 1;
+            while (i <= n) System.out.println(i++);
+        } else while (n > 0) System.out.println(n--);
+    }
+
+    public static void printMulTable(int n) {
+        for (int i = 1; i <= 10; i++) System.out.println(n+" * "+i+" = "+(n*i));
+    }
+
+    public static int sumUptoN(int n) {
+        return (n*(n+1))/2;
+    }
+
     public static void main(String[] args) {
-        printHelloNTimes(4);
+        System.out.println(sumUptoN(3));
     }
 }
