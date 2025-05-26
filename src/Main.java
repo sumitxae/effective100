@@ -1,7 +1,5 @@
 import java.lang.*;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void qu1 (int a, int b) {
@@ -101,7 +99,30 @@ public class Main {
         return (n*(n+1))/2;
     }
 
+    public static int getFactorial(int N) {
+        if (N < 0) return -1;
+        if (N == 0 || N == 1 || N == 2) return N;
+        return N * getFactorial(N-1);
+    }
+
+    public static int[] oddAndEvenSum (int n) {
+        int[] ans = {0,0};
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) ans[0]+=i;
+            else ans[1]+=i;
+        }
+        return ans;
+    }
+
+    public static int[] factorsOfN(int N) {
+        List<Integer> ans = new ArrayList<>();
+        for (int i = 1; i <= N; i++) {
+            if (N%i == 0) ans.add(i);
+        }
+        return ans.stream().mapToInt(Integer::intValue).toArray();
+    }
+
     public static void main(String[] args) {
-        System.out.println(sumUptoN(3));
+        System.out.println(Arrays.toString(factorsOfN(6)));
     }
 }

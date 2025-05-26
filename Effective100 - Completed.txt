@@ -41,7 +41,7 @@
        5 * 1 = 5
        5 * 2 = 10 ... up to 10 terms
 27- Sum up to n terms.
-28- Factorial of a numb	er
+28- Factorial of a number
 29- Print the sum of all even & odd numbers in a range seperately.
 30- Print all the factors of a number.
 31- Print the sum of all factors of a number, 50 -> 1 + 2 + 5 + 10 + 25 = 43
