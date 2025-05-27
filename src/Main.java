@@ -122,7 +122,73 @@ public class Main {
         return ans.stream().mapToInt(Integer::intValue).toArray();
     }
 
+    public static int reverseNumber(int N) {
+        int newNum = 0;
+        while(N%10 != 0){
+            newNum = newNum*10 + N%10;
+            N = N/10;
+        }
+        return newNum;
+    }
+
+    public static boolean isStrongNumber(int N) {
+        int sum = 0, temp = N;
+        while(temp%10 != 0){
+            sum+=getFactorial(temp%10);
+            temp/=10;
+        }
+        return sum == N;
+    }
+
+    public static boolean isAutomorphic(int N){
+        int square = N*N;
+        while (N!=0) {
+            if (N%10 != square%10) return false;
+            N /= 10;
+            square /= 10;
+        }
+        return true;
+    }
+
+    public static void que46() {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void que47() {
+        for (char i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void que48() {
+        for (char i = 0; i < 5; i++) {
+            for (int j = 0; j <= i; j++) {
+                char temp = (char) (65+j);
+                System.out.print(temp+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void que50(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 2*n-1; j++) {
+                if (j==i || j == (2*n-2-i)) System.out.print("*");
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(factorsOfN(6)));
+        que50(6);
     }
 }
