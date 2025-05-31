@@ -188,7 +188,74 @@ public class Main {
         }
     }
 
+//    Ques 56
+    public static int secondBigInt(int[] nums) {
+        if (nums.length <= 1) return -1;
+        if (nums.length == 2) return Math.min(nums[0], nums[1]);
+
+        int max = nums[0], smax = -1;
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > max) {
+                smax = max;
+                max = nums[i];
+            } else if (nums[i] != max && nums[i] > smax) {
+                smax = nums[i];
+            }
+        }
+        return smax;
+    }
+
+    public static int[] reverseArray(int[] nums) {
+        if (nums.length <= 1) return nums;
+        if (nums.length == 2) return new int[] {nums[1], nums[0]};
+
+        int s = 0, e = nums.length-1;
+
+        while (s<=e) {
+            int temp = nums[s];
+            nums[s++] = nums[e];
+            nums[e--] = temp;
+        }
+        return nums;
+    }
+
+    public static void reverseArray(int[] nums, int s, int e) {
+        if (s == e || s > e) return;
+        if (nums.length <= 1) return;
+        if (nums.length == 2) return;
+
+        while (s<=e) {
+            int temp = nums[s];
+            nums[s++] = nums[e];
+            nums[e--] = temp;
+        }
+    }
+
+    public static void rotateArrayByK (int[] nums, int k) {
+        if (k < 1 || nums.length <= 1) return;
+        if (nums.length == 2) return;
+        if (k > nums.length) k = k % nums.length;
+        reverseArray(nums, 0, k-1);
+        reverseArray(nums, k, nums.length-1);
+        reverseArray(nums);
+    }
+
+    public static int binSearch(int[] nums, int n) {
+        int s = 0, e = nums.length-1;
+        while (s<=e) {
+            int mid = (s+e)/2;
+            if (n == nums[mid]) return mid;
+            else if (n<nums[mid]) e = mid-1;
+            else s = mid+1;
+        }
+        return -1;
+    }
+
+
     public static void main(String[] args) {
-        que50(6);
+        int[] nums = new int[] {3,4,6,9,9};
+        int ans = binSearch(nums,2);
+        System.out.println(ans);
     }
 }
