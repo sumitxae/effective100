@@ -206,9 +206,9 @@ public class Main {
         return smax;
     }
 
-    public static int[] reverseArray(int[] nums) {
-        if (nums.length <= 1) return nums;
-        if (nums.length == 2) return new int[] {nums[1], nums[0]};
+    public static void reverseArray(int[] nums) {
+        if (nums.length <= 1) return;
+        if (nums.length == 2) return;
 
         int s = 0, e = nums.length-1;
 
@@ -217,7 +217,6 @@ public class Main {
             nums[s++] = nums[e];
             nums[e--] = temp;
         }
-        return nums;
     }
 
     public static void reverseArray(int[] nums, int s, int e) {
@@ -252,10 +251,35 @@ public class Main {
         return -1;
     }
 
+    public static void swap(int[] nums, int n, int m) {
+        int temp = nums[m];
+        nums[m] = nums[n];
+        nums[n] = temp;
+    }
+
+    public static void bubbleSort(int[] nums) {
+        for (int i = 0; i < nums.length-1; i++) {
+            for (int j = 0; j < nums.length-1; j++) {
+                if (nums[j] >= nums[j+1]) swap(nums, j, j+1);
+            }
+        }
+    }
+
+    public static void moveNegRight(int[] nums) {
+        int s = 0, e = nums.length - 1;
+        while (s < e) {
+            if (nums[s] < 0 && nums[e] > -1) {
+                swap(nums, s++, e--);
+            }
+            if (nums[s] >= 0) s++;
+            if (nums[e] < 0) e--;
+        }
+    }
 
     public static void main(String[] args) {
-        int[] nums = new int[] {3,4,6,9,9};
-        int ans = binSearch(nums,2);
-        System.out.println(ans);
+        int[] nums = new int[] {-9,1,0,-4,0,-2,7,-3,0,-1,0};
+        int[] ans = new int[2*nums.length];
+        moveNegRight(nums);
+        System.out.println(Arrays.toString(nums));
     }
 }
